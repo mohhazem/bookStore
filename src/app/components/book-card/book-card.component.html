@@ -4,7 +4,7 @@
     </mat-drawer-content>
 </mat-drawer-container>
 <div *ngFor="let book of books">
-<mat-card *ngIf=" (book.author === this.filter) || this.filter=='all' || this.filter=='' " class="sayed" >
+<mat-card *ngIf=" this.search===book.bookName || (this.search==='' && ((book.author === this.filter) || this.filter=='all' || this.filter=='' ))" class="sayed" >
     <div class="image">
         <img class="mb-1 mx-auto h-[200px]"
             src={{book.imageUrl}}

@@ -1,6 +1,7 @@
 import { NgSwitchDefault } from '@angular/common';
 import { Component } from '@angular/core';
 import { BookCardComponent } from '../book-card/book-card.component';
+import { Call } from '@angular/compiler';
 
 @Component({
   selector: 'app-filter-bar',
@@ -10,6 +11,7 @@ import { BookCardComponent } from '../book-card/book-card.component';
 export class FilterBarComponent {
   filter:string='all'
   bookCard;
+  search:string;
   constructor(bookCard:BookCardComponent){
     this.bookCard=bookCard
   }
@@ -18,6 +20,8 @@ export class FilterBarComponent {
     this.bookCard.updateFilter(this.filter);
   }
   sendSearch(val:string){
-    console.log("jino el gamd")
+    this.search=val
+    console.log(this.search);
+    this.bookCard.updateSearch(this.search);
   }
 }

@@ -1,5 +1,5 @@
-<mat-card class="mb-10" style="width: 100%;">
-    <div style="display:flex; flex-direction: row; justify-content: space-around; width: 100%;">
+<mat-card class="mb-10" style="width: 1000px; padding: 10px;">
+    <div style="display:flex; flex-direction: row; justify-content: space-between; width: 100%;">
         <div >
             <label>
                 Filter by Author: {{filter}}
@@ -8,10 +8,10 @@
                 <input id="author" #box placeholder="Author" (keyup)="sendFilter(box.value)">
             </div>
         </div>
-        <mat-drawer-content style="float: right; font-size: x-large;" >
-            <div style="border: 5px; border: color #aa350e; ;">
-              <input name="search" id="search" type="text" placeholder="search" #box (keydown)="sendSearch(box.value)">
-              <mat-icon>search</mat-icon>
+        <mat-drawer-content style="float: right; font-size: x-large; max-height: 300px;" >
+            <div>
+              <input id="search" #box2 placeholder="search" (keyup)="sendSearch(box2.value)">
+              <mat-icon style="height: 100px;">search</mat-icon>
             </div>
         </mat-drawer-content>
     </div>
