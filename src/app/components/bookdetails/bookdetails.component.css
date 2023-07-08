@@ -1,0 +1,31 @@
+h1{
+    font-size: xxx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+.body{
+    float: left;
+    padding-bottom: 30px; 
+    border: 20px;
+    padding: 20px;
+}
+.alo{
+    padding: 10px;
+    border: 20px;
+}
+.buttons{
+    padding-bottom: 10px;
+    font-size: larger;
+}
+.book-card-container {
+    max-width: 200px;
+    max-height: 350px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .card {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+  

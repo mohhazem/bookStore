@@ -1,0 +1,12 @@
+<mat-card class="mb-4">
+    <div class="flex justify-between">
+        <div>
+            <label>
+                Filter by Author: {{filter}}
+            </label>
+            <div>
+                <input id="author" #box placeholder="Author" (keyup)="sendFilter(box.value)">
+            </div>
+        </div>
+    </div>
+</mat-card>
