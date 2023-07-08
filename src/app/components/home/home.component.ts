@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
+import { BookCardComponent } from '../book-card/book-card.component';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +10,11 @@ import { HeaderComponent } from '../header/header.component';
 })
 export class HomeComponent {
   constructor(private route: ActivatedRoute,
-    private router: Router )
+    private router: Router)
     {
       this.router.navigateByUrl('/home')
     }
+  updateSearch(val:string){
+    console.log(val)
+  }
 }

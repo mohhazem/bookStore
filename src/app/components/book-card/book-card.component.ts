@@ -9,8 +9,11 @@ import { books } from '../../../mockBooks';
 })
 export class BookCardComponent {
   filter='all';
+  search='';
   books: book[]=books
-  
+  updateSearch(newSearch:string){
+    this.search=newSearch
+  }
   updateFilter(newFilter:string){
     this.filter=newFilter;
   }

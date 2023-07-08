@@ -17,4 +17,7 @@ export class FilterBarComponent {
     this.filter=val
     this.bookCard.updateFilter(this.filter);
   }
+  sendSearch(val:string){
+    console.log("jino el gamd")
+  }
 }
