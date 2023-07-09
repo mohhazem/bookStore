@@ -1,4 +1,4 @@
-<mat-drawer-container style="width: 100%;">
+<mat-drawer-container class="mat-drawer-container" style="width: 100%;">
     <mat-drawer-content>
       <app-filter-bar></app-filter-bar>
     </mat-drawer-content>
@@ -6,7 +6,7 @@
   <div *ngFor="let book of books" style="padding: 1%;">
     <mat-card *ngIf="this.search===book.bookName || (this.search==='' && ((book.author === this.filter) || this.filter=='all' || this.filter=='' ))" class="sayed">
       <div class="image">
-        <img class="mb-1 mx-auto h-[200px]"
+        <img style="height: 590px ;width: 350px;"
              src={{book.imageUrl}}
              routerLink="/book-details/{{book.bookId}}"
         >

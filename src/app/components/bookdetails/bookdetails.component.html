@@ -1,21 +1,17 @@
 <app-header></app-header>
-<div>
-<mat-drawer-container autosize="true">
-    <mat-drawer-content mode="side" opened="true" class="body" >
-      <div >
+<div class="container">
+  <mat-drawer-container class="mat-drawer-container">
+    <mat-drawer mode="side" opened="true">
+      <div>
         <button routerLink="/home" class="buttons">Books</button>
-        <br>
         <button routerLink="/author-table" class="buttons">Authors</button>
       </div>
-    </mat-drawer-content>
+    </mat-drawer>
     <mat-drawer-content class="body">
-        <img src="{{this.currentBook.imageUrl}}" style="height: 400 px; width: 400px;">
+      <img src="{{this.currentBook.imageUrl}}">
+      <h1>{{this.currentBook.bookName}}</h1>
+      <h2>Author: {{this.currentBook.author}}</h2>
+      <h2>Genre: {{this.currentBook.genre}}</h2>
     </mat-drawer-content>
-    <mat-drawer-content class="body">
-        <h1>{{this.currentBook.bookName}}</h1>
-        <h2>Author: {{this.currentBook.bookName}}</h2>
-        <h2>Genre: {{this.currentBook.genre}}</h2>
-
-    </mat-drawer-content>
-</mat-drawer-container>
+  </mat-drawer-container>
 </div>

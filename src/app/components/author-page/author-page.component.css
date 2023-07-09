@@ -1,10 +1,7 @@
-/* author-details.component.css */
-
-#jinzo {
-    width: 100%;
-    height: 100%;
+  .mat-drawer{
+    background-color: #dbc2ad;
+    width: 7%;
   }
-  
   .fullWidth {
     width: 100%;
   }
@@ -14,8 +11,19 @@
   }
   
   .buttons {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+    font-size: x-large;
+    width: 100%;
+  }
+  
+  .buttons:hover {
+    background-color: #c9dec0;
   }
   
   .sayad {

@@ -1,0 +1,112 @@
+.container {
+    height: 100%;
+  }
+  
+  .mat-drawer-container {
+    height: 100%;
+    font-family: 'Avant Garde', sans-serif;
+  }
+  
+  .mat-drawer {
+    background-color: #dbc2ad;
+    height: 100%;
+    width: 7%;
+  }
+  
+  .buttons {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+    font-size: x-large;
+    width: 100%;
+  }
+  
+  .buttons:hover {
+    background-color: #c9dec0;
+  }
+  
+  .form-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 20px;
+  }
+  
+  .form {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+  }
+  
+  .form h2 {
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+  }
+  
+  .form label {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form button {
+    margin-top: 20px;
+    background-color: #9CAFB7;
+    color: #fff;
+    font-size: x-large;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form button:hover {
+    background-color: #c9dec0;
+  }
+  
+  .mat-drawer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .mat-drawer-content {
+    width: 80%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .mat-drawer {
+      width: 15%;
+    }
+    .mat-drawer-content {
+      width: 85%;
+    }
+  }

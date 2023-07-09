@@ -1,27 +1,32 @@
-*{
-    font-size: x-large;
-    padding-top: 10px;
-    padding-left: 5px;
-    background-color: transparent;
+* {
+  font-size: x-large;
+  padding-top: 10px;
+  padding-left: 5px;
+  background-color: transparent;
 }
-.buttons{
-    padding-bottom: 10px;
-    font-size: larger;
+
+.buttons {
+  padding-bottom: 10px;
+  font-size: larger;
 }
+
 .book-card-container {
-    max-width: 200px;
-    max-height: 350px;
-    display: inline-block;
-    white-space: nowrap;
-  }
-  .card {
-    display: inline-block;
-    margin-right: 10px;
-    vertical-align: top;
-  }
+  max-width: 200px;
+  max-height: 350px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.card {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
 .fullWidth{
   width: 100%;
 }
+
 .buttons {
   margin: 10px 0;
   padding: 10px;
@@ -36,4 +41,63 @@
 
 .buttons:hover {
   background-color: #555;
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: end;
+}
+
+.filter-input {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 5px;
+}
+
+.filter-input input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  flex: 1;
+  padding: 5px;
+}
+
+.filter-input mat-icon {
+  color: #333;
+  padding: 5px;
+}
+
+.search-container {
+  float: right;
+  font-size: x-large;
+  max-height: 300px;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 5px;
+}
+
+.search-input input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  flex: 1;
+  padding: 5px;
+}
+
+.search-input mat-icon {
+  color: #333;
+  padding: 5px;
+}
+.mb-10{
+  background-color: transparent;
 }

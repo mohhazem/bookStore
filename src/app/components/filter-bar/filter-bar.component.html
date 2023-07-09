@@ -1,14 +1,14 @@
-<mat-card class="mb-10" style=" padding: 10px;">
-    <div style="display:flex; flex-direction: row; justify-content: space-between; width: 100%; align-items: end;">
-      <div style="display:flex; align-items:center; border-radius: 5px; background-color: #f2f2f2; padding: 5px;">
-        <input id="author" #box placeholder="Filter by Author" style="border: none; outline: none; background-color: transparent; flex: 1; padding: 5px; " (keyup)="sendFilter(box.value)">
-        <mat-icon style="color: #333; padding: 5px;">search</mat-icon>
-      </div>
-      <mat-drawer-content style="float: right; font-size: x-large; max-height: 300px;">
-        <div style="display:flex; align-items:center; border-radius: 5px; background-color: #f2f2f2; padding: 5px;">
-          <input id="search" #box2 placeholder="Search" style="border: none; outline: none; background-color: transparent; flex: 1; padding: 5px;" (keyup)="sendSearch(box2.value)">
-          <mat-icon style="color: #333; padding: 5px;">search</mat-icon>
-        </div>
-      </mat-drawer-content>
+<mat-card class="mb-10" style="padding: 10px;">
+  <div class="filter-container">
+    <div class="filter-input">
+      <input id="author" #box placeholder="Filter by Author" class="filter-input" (keyup)="sendFilter(box.value)">
+      <mat-icon class="filter-icon">search</mat-icon>
     </div>
-  </mat-card>
+    <mat-drawer-content class="search-container">
+      <div class="search-input">
+        <input id="search" #box2 placeholder="Search" class="search-input" (keyup)="sendSearch(box2.value)">
+        <mat-icon class="search-icon">search</mat-icon>
+      </div>
+    </mat-drawer-content>
+  </div>
+</mat-card>

@@ -4,7 +4,7 @@
       <div class="alo">
         <button routerLink="/home" class="buttons">Books</button>
         <br>
-        <button class="buttons">Authors</button>
+        <button routerLink="/author-table" class="buttons">Authors</button>
       </div>
     </mat-drawer>
     <mat-drawer-content class="fullWidth">
@@ -21,7 +21,7 @@
         <div *ngFor="let book of books" style="padding: 1%;" class="max-width">
             <mat-card *ngIf="book.authorId===this.currentAuthor.authorId" class="sayed">
               <div class="image">
-                <img class="mb-1 mx-auto h-[200px]"
+                <img style="height: 500px ;width: 350px;"
                      src={{book.imageUrl}}
                      routerLink="/book-details/{{book.bookId}}"
                 >
