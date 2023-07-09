@@ -1,21 +1,21 @@
 <mat-drawer-container style="width: 100%;">
-    <mat-drawer-content >
-        <app-filter-bar ></app-filter-bar>
+    <mat-drawer-content>
+      <app-filter-bar></app-filter-bar>
     </mat-drawer-content>
-</mat-drawer-container>
-<div *ngFor="let book of books" style="padding: 1%;">
-<mat-card *ngIf=" this.search===book.bookName || (this.search==='' && ((book.author === this.filter) || this.filter=='all' || this.filter=='' ))" class="sayed" >
-    <div class="image">
+  </mat-drawer-container>
+  <div *ngFor="let book of books" style="padding: 1%;">
+    <mat-card *ngIf="this.search===book.bookName || (this.search==='' && ((book.author === this.filter) || this.filter=='all' || this.filter=='' ))" class="sayed">
+      <div class="image">
         <img class="mb-1 mx-auto h-[200px]"
-            src={{book.imageUrl}}
-            routerLink="/book-details/{{book.bookId}}"
+             src={{book.imageUrl}}
+             routerLink="/book-details/{{book.bookId}}"
         >
-    </div>
-    <div class="text">
+      </div>
+      <div class="text">
         <a routerLink="/book-details/{{book.bookId}}">{{book.bookName}}</a>
-    </div>
-    <div class="text">
-        <a routerLink="author-page/{{book.author}}">{{book.author}}</a>
-    </div>
-</mat-card>
-</div>
+      </div>
+      <div class="text">
+        <a routerLink="/author-page/{{book.authorId}}">{{book.author}}</a>
+      </div>
+    </mat-card>
+  </div>

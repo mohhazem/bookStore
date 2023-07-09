@@ -1,1 +1,38 @@
-<p>author-page works!</p>
+<app-header></app-header>
+<mat-drawer-container style="width: 100%; height: 100%;" id="jinzo" >
+    <mat-drawer mode="side" opened="true" style=" height: 100%;">
+      <div class="alo">
+        <button routerLink="/home" class="buttons">Books</button>
+        <br>
+        <button class="buttons">Authors</button>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content class="fullWidth">
+        <h1>Author: {{this.currentAuthor.author}}</h1>
+        
+        <h2>
+            Email: {{this.currentAuthor.email}}   
+        </h2>
+        
+        <h3>
+            Bio: {{this.currentAuthor.bio}}
+        </h3>
+
+        <div *ngFor="let book of books" style="padding: 1%;" class="max-width">
+            <mat-card *ngIf="book.authorId===this.currentAuthor.authorId" class="sayed">
+              <div class="image">
+                <img class="mb-1 mx-auto h-[200px]"
+                     src={{book.imageUrl}}
+                     routerLink="/book-details/{{book.bookId}}"
+                >
+              </div>
+              <div class="text">
+                <a routerLink="/book-details/{{book.bookId}}">{{book.bookName}}</a>
+              </div>
+              <div class="text">
+                <a routerLink="/author-page/{{book.authorId}}">{{book.author}}</a>
+              </div>
+            </mat-card>
+          </div>
+    </mat-drawer-content>
+  </mat-drawer-container>

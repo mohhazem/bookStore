@@ -4,5 +4,7 @@ export interface book {
     imageUrl:string,
     genre: string,
     author: string,
-    authorId: number
+    authorId: number,
+    createdAt:string,
+    updatedAt:string
 }

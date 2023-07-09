@@ -1,5 +1,5 @@
 import { Component, Injectable, Input } from '@angular/core';
-import { book } from 'src/book';
+import { book } from 'src/app/models/book';
 import { ActivatedRoute } from '@angular/router';
 import { books } from 'src/mockBooks';
 
@@ -10,7 +10,7 @@ import { books } from 'src/mockBooks';
 })
 export class BookdetailsComponent {
   id: number;
-  currentBook: book = { bookId: 0, bookName: '', genre:'',imageUrl:'' , author: '', authorId:0 };
+  currentBook: book = { bookId: 0, bookName: '', genre:'',imageUrl:'' , author: '', authorId:0 ,createdAt:'',updatedAt:'' };
 
   constructor(private activatedRoute: ActivatedRoute) {}
 
@@ -21,7 +21,7 @@ export class BookdetailsComponent {
       console.log('Book ID:', this.id);
       const bookRequired = books.find((book) => book.bookId === this.id);
       if (bookRequired!=undefined){
-        this.currentBook=bookRequired
+        this.currentBook=bookRequired;
       }
     }
   }

@@ -23,6 +23,11 @@ import { FilterBarComponent } from './components/filter-bar/filter-bar.component
 import { BookCardComponent } from './components/book-card/book-card.component';
 import { AuthorPageComponent } from './components/author-page/author-page.component';
 import { BookdetailsComponent } from './components/bookdetails/bookdetails.component';
+import { AuthorsTableComponent } from './components/authors-table/authors-table.component';
+import { AddAuthorComponent } from './components/add-author/add-author.component';
+import { Service } from './services/service.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -34,6 +39,8 @@ import { BookdetailsComponent } from './components/bookdetails/bookdetails.compo
     BookCardComponent,
     AuthorPageComponent,
     BookdetailsComponent,
+    AuthorsTableComponent,
+    AddAuthorComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,9 +57,10 @@ import { BookdetailsComponent } from './components/bookdetails/bookdetails.compo
     MatToolbarModule,
     MatTableModule,
     MatBadgeModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
