@@ -54,10 +54,10 @@
     },
     {
       "id": 2,
-      "bookName": "harry potter2",
-      "imageUrl": "https://i.pinimg.com/originals/c3/27/e3/c327e329384206f77538ac97a2b24410.jpg",
-      "genre": "magic",
-      "author": "Ahmed Abd El Moneim",
+      "bookName": "JANE",
+      "genre": "scary",
+      "imageUrl": "https://tse1.mm.bing.net/th?id=OIP.0qxWWiv5uAS-T2OK11jpawHaLZ&pid=Api&P=0&h=180",
+      "author": "Ahmed Abd EL Moneim",
       "authorId": 1,
       "createdAt": "",
       "updatedAt": ""
@@ -73,7 +73,7 @@
       "updatedAt": ""
     },
     {
-      "id": 1,
+      "id": 4,
       "bookName": "harry potter",
       "imageUrl": "https://149455152.v2.pressablecdn.com/wp-content/uploads/2013/07/hpnc6-672x1024.jpg",
       "genre": "magic",
@@ -83,11 +83,31 @@
       "updatedAt": ""
     },
     {
-      "id": 2,
+      "id": 5,
       "bookName": "harry potter2",
       "imageUrl": "https://149455152.v2.pressablecdn.com/wp-content/uploads/2013/07/hpnc6-672x1024.jpg",
       "genre": "magic",
       "author": "Ahmed Abd El Moneim",
+      "authorId": 1,
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": 6,
+      "bookName": "1984",
+      "genre": "scary",
+      "imageUrl": "http://thehuffmanpost.files.wordpress.com/2013/06/1984.jpg",
+      "author": "Ahmed Abd EL Moneim",
+      "authorId": 1,
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": 7,
+      "bookName": "JANE",
+      "genre": "scary",
+      "imageUrl": "https://tse1.mm.bing.net/th?id=OIP.0qxWWiv5uAS-T2OK11jpawHaLZ&pid=Api&P=0&h=180",
+      "author": "Ahmed Abd EL Moneim",
       "authorId": 1,
       "createdAt": "",
       "updatedAt": ""

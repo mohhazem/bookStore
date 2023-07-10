@@ -1,0 +1,33 @@
+<app-header></app-header>
+<mat-drawer-container class="mat-drawer-container">
+    <mat-drawer mode="side" opened="true">
+        <div>
+            <button routerLink="/home" class="buttons">Books</button>
+            <br>
+            <button routerLink="/author-table" class="buttons">Authors</button>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content class="body">
+        <div class="form-container">
+            <form class="form">
+                <h2>Edit Book</h2>
+                <div>
+                    <label for="name">Book name:</label>
+                    <input name="name" id="name" type="text" #box1 placeholder="Book name"
+                        (keyup)="updateName(box1.value)">
+                </div>
+                <div>
+                    <label for="genre">genre:</label>
+                    <input name="genre" id="genre" type="text" #box2 placeholder="genre"
+                        (keyup)="updateGenre(box2.value)">
+                </div>
+                <div>
+                    <label for="imageUrl">imageUrl:</label>
+                    <input name="imageUrl" id="imageUrl" type="imageUrl" #box3 placeholder="imageUrl"
+                        (keyup)="updateImageUrl(box3.value)">
+                </div>
+                <button (click)="ngOnClick()">Add</button>
+            </form>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

@@ -27,11 +27,11 @@
         <div class="text">
           <a routerLink="/author-page/{{book.authorId}}">{{book.author}}</a>
         </div>
-        <button class="green-button">Edit Book</button>
+        <button routerLink="/edit-book/{{this.currentAuthor.id}}/{{book.id}}" class="green-button">Edit Book</button>
         <button class="red-button">Delete Book</button>
       </mat-card>
     </div>
-     <button class="green-button">AddBook</button>
+     <button routerLink="/add-book/{{this.currentAuthor.id}}" class="green-button">AddBook</button>
     <button class="yellow-button">Edit Author</button>
     <button class="red-button">Delete author</button>
   </mat-drawer-content>

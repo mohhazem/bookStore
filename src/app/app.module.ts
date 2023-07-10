@@ -27,6 +27,8 @@ import { AuthorsTableComponent } from './components/authors-table/authors-table.
 import { AddAuthorComponent } from './components/add-author/add-author.component';
 import { Service } from './services/service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { EditBookComponent } from './components/edit-book/edit-book.component';
+import { AddBookComponent } from './components/add-book/add-book.component';
 
 
 
@@ -41,6 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     BookdetailsComponent,
     AuthorsTableComponent,
     AddAuthorComponent,
+    EditBookComponent,
+    AddBookComponent,
   ],
   imports: [
     BrowserModule,
