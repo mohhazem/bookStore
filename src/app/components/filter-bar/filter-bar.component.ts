@@ -21,7 +21,6 @@ export class FilterBarComponent {
   }
   sendSearch(val:string){
     this.search=val
-    console.log(this.search);
     this.bookCard.updateSearch(this.search);
   }
 }

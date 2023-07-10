@@ -65,7 +65,8 @@ export class NetworkServicesService {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
-      })
+      }),
+      method: 'PUT'
     };
     return this.http.put<author>(`${this.fakeApi}/authors/${updatedAuthor.id}`, updatedAuthor, httpOptions);
   }

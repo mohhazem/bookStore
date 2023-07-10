@@ -4,13 +4,15 @@
 }
 .text{
     padding-bottom: 5px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
 .image{
     max-width: 350px;
     padding-bottom: 5px;
 }
-.sayed{
+.padd{
     padding: 20px;
 }
 .mat-drawer-container{

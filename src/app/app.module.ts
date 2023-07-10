@@ -29,6 +29,7 @@ import { Service } from './services/service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EditBookComponent } from './components/edit-book/edit-book.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
+import { EditAuthorComponent } from './components/edit-author/edit-author.component';
 
 
 
@@ -45,6 +46,7 @@ import { AddBookComponent } from './components/add-book/add-book.component';
     AddAuthorComponent,
     EditBookComponent,
     AddBookComponent,
+    EditAuthorComponent
   ],
   imports: [
     BrowserModule,

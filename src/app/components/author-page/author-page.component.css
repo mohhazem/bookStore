@@ -39,10 +39,9 @@
   justify-content: center;
   margin-top: 10px;
 }
-.mat-drawer{ background-color: #dbc2ad; width: 7%; } .fullWidth { width: 100%; }
-.alo {
-padding: 1rem;
-}
+.mat-drawer{ background-color: #dbc2ad; width: 7%; } 
+.Width-93 { width: 93%; }
+
 
 .buttons {
 margin: 10px 0;
@@ -60,14 +59,6 @@ width: 100%;
 background-color: #c9dec0;
 }
 
-.sayad {
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-margin-bottom: 1rem;
-max-width: 300px;
-max-height: 300px; /* add this line to limit the width of the card */
-}
-
 .image {
 display: flex;
 justify-content: center;
@@ -75,6 +66,8 @@ justify-content: center;
 
 .text {
 text-align: center;
+font-size: larger;
+font-family: 'Times New Roman', Times, serif;
 }
 .max-width{
 max-width: 300px;

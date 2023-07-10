@@ -1,15 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { author } from 'src/app/models/author';
 import { NetworkServicesService } from 'src/app/services/network-services.service';
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-add-author',
-  templateUrl: './add-author.component.html',
-  styleUrls: ['./add-author.component.css'],
-  providers:[NetworkServicesService]
+  selector: 'app-edit-author',
+  templateUrl: './edit-author.component.html',
+  styleUrls: ['./edit-author.component.css']
 })
-export class AddAuthorComponent implements OnInit {
+export class EditAuthorComponent {
   newAuthor: author = {
     id: 0,
     author: "",
@@ -19,7 +18,7 @@ export class AddAuthorComponent implements OnInit {
     updatedAt: ""
   };
   @Input() authors:author[];
-  constructor(public service: NetworkServicesService) {
+  constructor(public service: NetworkServicesService,public activatedRoute:ActivatedRoute) {
   }
   ngOnInit(){
      this.service.getAuthors().subscribe((newAuthors)=>this.authors=newAuthors);
@@ -37,9 +36,14 @@ export class AddAuthorComponent implements OnInit {
     this.submitForm()
   }
   submitForm() {
-    this.newAuthor.id = this.authors.length +1; 
-    if(this.newAuthor!= undefined){
-    this.service.postAuthor(this.newAuthor).subscribe((author)=>this.authors.push(author))
+    const param = this.activatedRoute.snapshot.paramMap.get('authorId');
+    if (param){
+      this.newAuthor.id = parseInt(param);
     }
+    console.log(this.newAuthor)
+    if(this.newAuthor!= undefined){
+    this.service.updateAuthor(this.newAuthor).subscribe((author)=>this.newAuthor=author)
+    }
+    console.log(this.authors);
   }
 }

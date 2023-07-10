@@ -7,7 +7,7 @@
       <button routerLink="/author-table" class="buttons">Authors</button>
     </div>
   </mat-drawer>
-  <mat-drawer-content class="fullWidth">
+  <mat-drawer-content class="Width-93">
     <h1>Author: {{this.currentAuthor.author}}</h1>
     <h2>
       Email: {{this.currentAuthor.email}}
@@ -27,12 +27,12 @@
         <div class="text">
           <a routerLink="/author-page/{{book.authorId}}">{{book.author}}</a>
         </div>
-        <button routerLink="/edit-book/{{this.currentAuthor.id}}/{{book.id}}" class="green-button">Edit Book</button>
-        <button class="red-button">Delete Book</button>
+        <button routerLink="/edit-book/{{this.currentAuthor.id}}/{{book.id}}" class="yellow-button">Edit Book</button>
+        <button (click)="deleteBook(book.id)" class="red-button">Delete Book</button>
       </mat-card>
     </div>
      <button routerLink="/add-book/{{this.currentAuthor.id}}" class="green-button">AddBook</button>
-    <button class="yellow-button">Edit Author</button>
-    <button class="red-button">Delete author</button>
+    <button routerLink="/edit-author/{{this.currentAuthor.id}}" class="yellow-button">Edit Author</button>
+    <button (click)="deleteAuthor()" class="red-button" routerLink="/home">Delete author</button>
   </mat-drawer-content>
 </mat-drawer-container>

@@ -8,6 +8,7 @@ import { BookCardComponent } from './components/book-card/book-card.component';
 import { AddAuthorComponent } from './components/add-author/add-author.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { EditBookComponent } from './components/edit-book/edit-book.component';
+import { EditAuthorComponent } from './components/edit-author/edit-author.component';
 
 const routes: Routes = [
   {path:'',redirectTo: 'home',pathMatch:'full'},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:'book-card',component:BookCardComponent},
   {path:'add-author',component:AddAuthorComponent},
   {path:'add-book/:authorId',component:AddBookComponent},
-  {path:'edit-book/:authorId/:bookId',component:EditBookComponent}
+  {path:'edit-book/:authorId/:bookId',component:EditBookComponent},
+  {path:'edit-author/:authorId',component:EditAuthorComponent}
 ];
 
 @NgModule({

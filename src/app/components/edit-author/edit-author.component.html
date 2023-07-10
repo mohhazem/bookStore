@@ -1,0 +1,30 @@
+<app-header></app-header>
+<mat-drawer-container class="mat-drawer-container">
+  <mat-drawer mode="side" opened="true">
+    <div>
+      <button routerLink="/home" class="buttons">Books</button>
+      <br>
+      <button routerLink="/author-table" class="buttons">Authors</button>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content class="body">
+    <div class="form-container">
+      <form class="form">
+        <h2>Edit Author</h2>
+        <div>
+          <label for="author">Author name:</label>
+          <input name="author" id="author" type="text" #box1 placeholder="Author name" (keyup)="updateAuthor(box1.value)">
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input name="email" id="email" type="email" #box2 placeholder="Email" (keyup)="updateEmail(box2.value)">
+        </div>
+        <div>
+          <label for="bio">Bio:</label>
+          <input name="bio" id="bio" type="text" #box3 placeholder="Bio" (keyup)="updateBio(box3.value)">
+        </div>
+        <button (click)="ngOnClick()">Edit</button>
+      </form>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
