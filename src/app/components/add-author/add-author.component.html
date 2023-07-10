@@ -9,22 +9,22 @@
   </mat-drawer>
   <mat-drawer-content class="body">
     <div class="form-container">
-      <form class="form" (ngSubmit)="submitForm(box1.value,box2.value,box3.value)">
-        <h2>Add New Author</h2>
+      <h2>Add New Author</h2>
+      
         <div>
           <label for="author">Author name:</label>
-          <input name="author" id="author" type="text" #box1 placeholder="Author name">
+          <input name="author" id="author" type="text" #box1 placeholder="Author name" (keyup)="updateAuthor(box1.value)">
         </div>
         <div>
           <label for="email">Email:</label>
-          <input name="email" id="email" type="email" #box2 placeholder="Email">
+          <input name="email" id="email" type="email" #box2 placeholder="Email" (keyup)="updateEmail(box2.value)">
         </div>
         <div>
           <label for="bio">Bio:</label>
-          <input name="bio" id="bio" type="text" #box3 placeholder="Bio">
+          <input name="bio" id="bio" type="text" #box3 placeholder="Bio" (keyup)="updateBio(box3.value)">
         </div>
-        <button type="submit">Add</button>
-      </form>
+        <button (click)="ngOnClick()">Add</button>
+ 
     </div>
   </mat-drawer-content>
 </mat-drawer-container>
