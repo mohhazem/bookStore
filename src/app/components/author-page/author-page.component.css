@@ -1,49 +1,83 @@
-  .mat-drawer{
-    background-color: #dbc2ad;
-    width: 7%;
-  }
-  .fullWidth {
-    width: 100%;
-  }
-  
-  .alo {
-    padding: 1rem;
-  }
-  
-  .buttons {
-    margin: 10px 0;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: #fff;
-    font-size: x-large;
-    width: 100%;
-  }
-  
-  .buttons:hover {
-    background-color: #c9dec0;
-  }
-  
-  .sayad {
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 1rem;
-    max-width: 300px;
-    max-height: 300px; /* add this line to limit the width of the card */
-  }
-  
-  .image {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .text {
-    text-align: center;
-  }
-  .max-width{
-    max-width: 300px;
-    flex-direction: row;
-    float: left;
-  }
+.green-button {
+  background-color: green;
+  color: white;
+  border-bottom: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  width: 150px;
+  align-self: center;
+}
+
+.yellow-button {
+  background-color: yellow;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  width: 150px;
+  align-self: center;
+}
+
+.red-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  width: 150px;
+  align-self: center;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.mat-drawer{ background-color: #dbc2ad; width: 7%; } .fullWidth { width: 100%; }
+.alo {
+padding: 1rem;
+}
+
+.buttons {
+margin: 10px 0;
+padding: 10px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.3s ease;
+color: #fff;
+font-size: x-large;
+width: 100%;
+}
+
+.buttons:hover {
+background-color: #c9dec0;
+}
+
+.sayad {
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+margin-bottom: 1rem;
+max-width: 300px;
+max-height: 300px; /* add this line to limit the width of the card */
+}
+
+.image {
+display: flex;
+justify-content: center;
+}
+
+.text {
+text-align: center;
+}
+.max-width{
+max-width: 300px;
+flex-direction: row;
+float: left;
+}
