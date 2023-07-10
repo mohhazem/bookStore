@@ -1,4 +1,98 @@
 {
-  "authors": [],
-  "books": []
+  "authors": [
+    {
+      "id": 1,
+      "author": "George Orwell",
+      "email": "George@gmail.com",
+      "bio": "Eric Arthur Blair (25 June 1903 – 21 January 1950)",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": 2,
+      "author": "J.K.Rowling",
+      "email": "J.K.Rowling@gmail.com",
+      "bio": "Harry potter Author",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": 3,
+      "author": "William Shakespeare",
+      "email": "William@gmail.com",
+      "bio": "Great Author",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": 4,
+      "author": "Ahmed Khaled Tawfik",
+      "email": "Ahmed@gmail.com",
+      "bio": "Great Egyptian Author ",
+      "createdAt": "",
+      "updatedAt": ""
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "bookName": "1984",
+      "genre": "Dystopian fiction",
+      "imageUrl": "https://3.bp.blogspot.com/-0tvImykK1EM/WV1BWyM5iHI/AAAAAAAAAUc/pmfwhp9crMgYG0kbZcvt8q97d7QV9CJegCEwYBhgL/s1600/1984_by_alcook-d4z39dh.jpg",
+      "author": "George Orwell",
+      "authorId": 1,
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": 2,
+      "bookName": "Animal Farm",
+      "genre": "Political satire",
+      "imageUrl": "https://1.bp.blogspot.com/-l9WIaYv5Eo0/X3mgXKsrdiI/AAAAAAAABoA/MCOiZ-rjLTAfbfolbJrrYeMZ7eP3GGHCgCLcBGAsYHQ/s2048/9780241391846.jpg",
+      "author": "George Orwell",
+      "authorId": 1,
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": 3,
+      "bookName": "Harry Potter",
+      "genre": "Magic",
+      "imageUrl": "http://i2.wp.com/geekdad.com/wp-content/uploads/2013/02/HP1-Kibuishi.jpg",
+      "author": "J.K.Rowling",
+      "authorId": 2,
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": 4,
+      "bookName": "Harry Potter 2",
+      "genre": "Magic",
+      "imageUrl": "https://i1.wp.com/geekdad.com/wp-content/uploads/2013/07/hpnc6.jpg?resize=1575%2C2400&ssl=1",
+      "author": "J.K.Rowling",
+      "authorId": 2,
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": 5,
+      "bookName": "Hamlet",
+      "genre": "Drama",
+      "imageUrl": "https://i.pinimg.com/originals/57/d2/85/57d285ebb4175313392bda424e580dd8.jpg",
+      "author": "William Shakespeare",
+      "authorId": 3,
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "id": 6,
+      "bookName": "Utopia",
+      "genre": "Drama",
+      "imageUrl": "https://tse3.mm.bing.net/th?id=OIP.yjojeeJxkKd5AWEBdW51pwAAAA&pid=Api&P=0&h=180",
+      "author": "Ahmed Khaled Tawfik",
+      "authorId": 4,
+      "createdAt": "",
+      "updatedAt": ""
+    }
+  ]
 }
