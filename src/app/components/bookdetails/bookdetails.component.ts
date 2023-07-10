@@ -1,7 +1,7 @@
 import { Component, Injectable, Input } from '@angular/core';
 import { book } from 'src/app/models/book';
 import { ActivatedRoute } from '@angular/router';
-import { books } from 'src/mockBooks';
+import { NetworkServicesService } from 'src/app/services/network-services.service';
 
 @Component({
   selector: 'app-bookdetails',
@@ -10,19 +10,15 @@ import { books } from 'src/mockBooks';
 })
 export class BookdetailsComponent {
   id: number;
-  currentBook: book = { bookId: 0, bookName: '', genre:'',imageUrl:'' , author: '', authorId:0 ,createdAt:'',updatedAt:'' };
-
-  constructor(private activatedRoute: ActivatedRoute) {}
+  book:book
+  constructor(private activatedRoute: ActivatedRoute,public service:NetworkServicesService) {}
 
   ngOnInit(): void {
     const param = this.activatedRoute.snapshot.paramMap.get('bookid');
     if (param) {
       this.id = parseInt(param);
-      console.log('Book ID:', this.id);
-      const bookRequired = books.find((book) => book.bookId === this.id);
-      if (bookRequired!=undefined){
-        this.currentBook=bookRequired;
+      this.service.getBookById(this.id).subscribe((book) => {
+        this.book = book})
       }
     }
   }
-}

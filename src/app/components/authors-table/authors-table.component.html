@@ -20,7 +20,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let author of displayedAuthors">
-            <td><a routerLink="/author-page/{{author.authorId}}">{{ author.author }}</a></td>
+            <td><a routerLink="/author-page/{{author.id}}">{{ author.author }}</a></td>
             <td>{{ author.email }}</td>
             <td>{{ author.bio }}</td>
           </tr>

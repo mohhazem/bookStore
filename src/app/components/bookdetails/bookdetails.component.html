@@ -8,10 +8,12 @@
       </div>
     </mat-drawer>
     <mat-drawer-content class="body">
-      <img src="{{this.currentBook.imageUrl}}">
-      <h1>{{this.currentBook.bookName}}</h1>
-      <h2>Author: {{this.currentBook.author}}</h2>
-      <h2>Genre: {{this.currentBook.genre}}</h2>
+      <img src="{{this.book.imageUrl}}">
+      <h1>{{this.book.bookName}}</h1>
+      <h2>Author: 
+        <a routerLink="/author-page/{{this.book.authorId}}">{{this.book.author}}</a>
+      </h2>
+      <h2>Genre: {{this.book.genre}}</h2>
     </mat-drawer-content>
   </mat-drawer-container>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { author } from 'src/app/models/author';
 import { NetworkServicesService } from 'src/app/services/network-services.service';
 
@@ -11,19 +11,18 @@ import { NetworkServicesService } from 'src/app/services/network-services.servic
 })
 export class AddAuthorComponent implements OnInit {
   newAuthor: author = {
-    authorId: 0,
-    author: '',
-    email: '',
-    bio: '',
-    createdAt: '',
-    updatedAt: ''
+    id: 0,
+    author: "",
+    email: "",
+    bio: "",
+    createdAt: "",
+    updatedAt: ""
   };
-  authors:author[];
+  @Input() authors:author[];
   constructor(public service: NetworkServicesService) {
   }
   ngOnInit(){
      this.service.getAuthors().subscribe((newAuthors)=>this.authors=newAuthors);
-     console.log(this.authors)
   }
   updateBio(newBio: string) {
     this.newAuthor.bio = newBio
@@ -38,7 +37,11 @@ export class AddAuthorComponent implements OnInit {
     this.submitForm()
   }
   submitForm() {
-    this.newAuthor.authorId = this.authors.length ; 
+    this.newAuthor.id = this.authors.length +1; 
+    console.log(this.newAuthor)
+    if(this.newAuthor!= undefined){
+    this.service.postAuthor(this.newAuthor).subscribe((author)=>this.authors.push(author))
+    }
     console.log(this.authors);
   }
 }

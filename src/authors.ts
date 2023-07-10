@@ -2,7 +2,7 @@ import { author } from "./app/models/author";
 
 export const authors:author[] = [
     {
-        "authorId":1,
+        "id":1,
         "author":"Ahmed Abd EL Moneim",
         "email":"ahmed@gmail.com",
         "bio":"ahmed mo7sn",
@@ -10,7 +10,7 @@ export const authors:author[] = [
         "updatedAt":''
     },
     {
-        "authorId":2,
+        "id":2,
         "author":"hazem",
         "email":"hazem@gmail.com",
         "bio":"valo",

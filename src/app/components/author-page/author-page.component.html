@@ -19,15 +19,15 @@
         </h3>
 
         <div *ngFor="let book of books" style="padding: 1%;" class="max-width">
-            <mat-card *ngIf="book.authorId===this.currentAuthor.authorId" class="sayed">
+            <mat-card *ngIf="book.authorId===this.currentAuthor.id" class="sayed">
               <div class="image">
                 <img style="height: 500px ;width: 350px;"
                      src={{book.imageUrl}}
-                     routerLink="/book-details/{{book.bookId}}"
+                     routerLink="/book-details/{{book.id}}"
                 >
               </div>
               <div class="text">
-                <a routerLink="/book-details/{{book.bookId}}">{{book.bookName}}</a>
+                <a routerLink="/book-details/{{book.id}}">{{book.bookName}}</a>
               </div>
               <div class="text">
                 <a routerLink="/author-page/{{book.authorId}}">{{book.author}}</a>

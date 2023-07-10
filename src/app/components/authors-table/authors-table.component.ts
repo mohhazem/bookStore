@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { author } from 'src/app/models/author';
-import { authors } from 'src/authors';
+import { NetworkServicesService } from 'src/app/services/network-services.service';
 
 @Component({
   selector: 'app-authors-table',
@@ -8,16 +8,20 @@ import { authors } from 'src/authors';
   styleUrls: ['./authors-table.component.css']
 })
 export class AuthorsTableComponent {
-  
-  authors: author[] = authors;
+  authors: author[] 
   displayedAuthors: author[] = [];
-  pageSize = 1;
+  pageSize = 3;
   currentPage = 1;
   pages: number[] = [];
-  totalPages = 2;
-  
+  totalPages :number;
+
+  constructor(public service:NetworkServicesService){}
+
   ngOnInit() {
-    this.loadAuthors();
+    this.service.getAuthors().subscribe((authors) => {
+      this.authors = authors;
+      this.loadAuthors();
+    });
   }
   
   loadAuthors() {
@@ -25,15 +29,18 @@ export class AuthorsTableComponent {
   }
   
   paginateAuthors() {
-    const startIndex = (this.currentPage - 1) * this.pageSize;
+    this.totalPages = Math.ceil(this.authors.length / this.pageSize);
+    var startIndex = (this.currentPage - 1) * this.pageSize;
     this.displayedAuthors = this.authors.slice(startIndex, startIndex + this.pageSize);
   }
+  
   goToNextPage() {
     if (this.currentPage < this.totalPages) {
       this.currentPage++;
     }
     this.paginateAuthors();
   }
+  
   goToPreviousPage() {
     if (this.currentPage > 1) {
       this.currentPage--;

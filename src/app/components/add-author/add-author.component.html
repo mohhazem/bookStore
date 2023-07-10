@@ -9,8 +9,8 @@
   </mat-drawer>
   <mat-drawer-content class="body">
     <div class="form-container">
-      <h2>Add New Author</h2>
-      
+      <form class="form">
+        <h2>Add New Author</h2>
         <div>
           <label for="author">Author name:</label>
           <input name="author" id="author" type="text" #box1 placeholder="Author name" (keyup)="updateAuthor(box1.value)">
@@ -24,7 +24,7 @@
           <input name="bio" id="bio" type="text" #box3 placeholder="Bio" (keyup)="updateBio(box3.value)">
         </div>
         <button (click)="ngOnClick()">Add</button>
- 
+      </form>
     </div>
   </mat-drawer-content>
 </mat-drawer-container>
